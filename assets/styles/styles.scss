@@ -1,0 +1,284 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Roboto:400,700|Roboto+Condensed&display=swap');
+
+$font-headline: 'DM Serif Text', serif;
+$font-body: 'Roboto', sans-serif;
+$font-condens: 'Roboto Condensed', sans-serif;
+
+// colors
+$champagne: #F0E3D1;
+$tea: #ccb89d70;
+$gray: #808184; 
+$mocha: #a99478; 
+$lightMocha: #f6f6f3;   
+$lightGray: #d4d2cc;
+
+$teal: #5f9ca2;
+$mauve: #9a728a;
+$ruby: #b57373;
+$green: #859e64;
+
+//html
+html {
+    scroll-behavior: smooth;
+}
+
+// styles
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $lightMocha;
+
+} 
+
+// navigation
+nav {
+    display: block; 
+    position: fixed;
+    width: 100%;
+    background-color: $lightMocha;
+    top: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+
+    .logo {
+        font-family: $font-headline;
+        color: black;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;        
+    }    
+
+    ul {
+        display: flex; 
+        flex-direction: row;
+        justify-content: flex-end;
+
+        a.navItem {
+            color: black;
+            font-family: $font-body;
+            padding: 5px 0;
+            margin: 0 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+            font-size: .8em;
+
+            &:hover, &:visited, &:active {
+                border-bottom: 3px solid $green;
+            }
+        }
+    }
+} 
+
+.contentWrapper {
+    position: relative;
+    padding: 5% 2%;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;
+
+    &.firstOne {
+        margin-top: 100px;
+    }
+
+    h1 {
+        color: $mocha;
+        background-color: white; 
+        font-size: 3.25em;
+        padding: 0.5em;
+        margin: 0 auto 0 -70px;
+        position: absolute;
+        top: 30%;
+        font-family: $font-headline;
+        letter-spacing: 2px;
+        text-align: left;
+        font-weight: 300;
+        width: 45%;
+        display: inline-block; 
+        box-sizing: border-box;  
+        
+        span {
+            color: black;
+        }
+    }
+
+    h2 {
+        font-size: 3em;
+        text-align: center;
+        font-family: $font-headline;
+        letter-spacing: 2px;
+    }
+
+
+    .myPhoto {
+        width: 55%;
+        display: inline-block;
+        margin: 0 auto;    
+        position: relative;
+        border: 15px solid white;
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    
+    p {
+        font-family: $font-body;
+        font-size: 1em;
+        line-height: 1.75em;
+        padding: 0;
+        margin: 1em auto; 
+    }
+
+    .skillWrapper {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 30px 0;
+
+        .skillRow {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 20px 0;
+
+            .title {
+                font-size: 1em;
+                text-transform: uppercase;
+                font-family: $font-condens;
+                color: black;
+                width: 15%;
+                text-align: right;
+                margin-right: 20px;
+            }
+
+            .meter {
+                width: 85%;
+                background-color: white;
+                height: 20px;
+
+                span {
+                    
+                    display: block;
+                    height: 100%;
+
+                    &.mocha { background-color: $mocha}
+                    &.tea { background-color: $tea}
+                    &.gray { background-color: $gray}
+                    &.teal { background-color: $teal}
+                    &.mauve { background-color: $mauve}
+                    &.ruby { background-color: $ruby}
+                    &.green { background-color: $green}
+                }
+
+            }
+        }
+
+    }
+
+    .portfolioWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 30px auto;
+
+        .portfolioPiece {
+            width: calc(100% / 3 - 4%);
+            height: 250px;
+            margin: 2%;
+            background-color: $tea;
+
+            .portText {
+                font-family: $font-body;
+                color: white;
+                font-size: 1em;
+                text-align: center;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    form {
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin: 10px auto;
+            font-size: 1em;
+
+            &:focus {
+                outline: none;
+                border: 2px solid #ccc;
+            }
+        }
+
+        .formLabels {
+            font-size: 1.25em;
+            margin: 1em auto 0 0;
+        }
+
+        button {
+            background-color: $green;
+            color:white;
+            padding: 10px;
+            border: none;
+            font-family: $font-body;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 50px auto;
+            position: relative;
+            font-size: 1em;
+            border: 2px solid #f6f6f3;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover, &:visited, &:active {
+                border: 2px solid #ccc;
+                background-color: $mocha;
+                color: white;
+            }
+        }
+    }
+}
+
+
+// footer 
+
+footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+
+    .copyright {
+        color: white;
+        text-align: center;
+        display: block;
+        font-size: .75em;
+        letter-spacing: 1px;
+        padding: 1em;
+        font-family: $font-body;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
