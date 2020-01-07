@@ -21,6 +21,7 @@ $green: #859e64;
 //html
 html {
     scroll-behavior: smooth;
+    oversc
 }
 
 // styles
@@ -127,6 +128,7 @@ nav {
         position: relative;
         border: 15px solid white;
         box-sizing: border-box;
+        margin-bottom: 2em;
 
         img {
             width: 100%;
@@ -141,6 +143,20 @@ nav {
         line-height: 1.75em;
         padding: 0;
         margin: 1em auto; 
+    }
+
+    .iconWrapper {
+        width: 55%;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 30px auto 0 auto;
+        justify-content: center;
+
+        .fab, .fas {
+            font-size: 2em;
+            color: black;
+            margin: 0 15px;
+        }
     }
 
     .skillWrapper {
@@ -200,11 +216,16 @@ nav {
             height: 250px;
             margin: 2%;
             background-color: $tea;
+            text-decoration: none;
+
+            &:active, &:hover {
+                background-color: $green;
+            }
 
             .portText {
-                font-family: $font-body;
+                font-family: $font-headline;
                 color: white;
-                font-size: 1em;
+                font-size: 1.25em;
                 text-align: center;
                 position: relative;
                 top: 50%;
@@ -281,4 +302,75 @@ footer {
         top: 50%;
         transform: translateY(-50%);
     }
+}
+
+// tablet
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+
+}
+
+// mobile
+@media only screen and (max-width: 768px) {
+    nav {
+        box-sizing: border-box;
+        padding: 15px;
+
+        .logo {
+            position: relative;
+            left: 10px;
+            top: 0;
+            transform: none;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+        }
+
+        ul {
+            justify-content: center;
+
+            a.navItem {
+                margin: 0 5px;
+            }
+        }
+    }
+    
+    .contentWrapper {
+
+        h1 {
+            position: relative;
+            display: block;
+            width: 80%;
+            margin: -90px auto 0 auto;
+            font-size: 2em;
+        }
+
+        .myPhoto {
+            width: 100%;
+            display: block;
+        }
+
+        .skillWrapper {
+            .skillRow {
+                flex-wrap: wrap;
+                margin: 10px 0;
+
+                .title {
+                    width: 100%;
+                    text-align: left;
+                    margin: 10px 0 5px 0;
+                }
+
+                .meter {
+                    width: 100%;
+                }
+            }
+        }
+
+        .portfolioWrapper {
+            .portfolioPiece {
+                width: 100%;
+            }
+        }
+    }
+
 }
