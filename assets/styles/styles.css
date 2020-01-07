@@ -1,17 +1,307 @@
-/* Error: expected "{".
- *    ,
- * 24 |     oversc
- *    |           ^
- *    '
- *   styles.scss 24:11  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 24 \2502      oversc\a    \2502            ^\a    \2575 \a   styles.scss 24:11  root stylesheet';
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Text|Roboto:400,700|Roboto+Condensed&display=swap");
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f3;
+}
+
+nav {
+  display: block;
+  position: fixed;
+  width: 100%;
+  background-color: #f6f6f3;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
+nav .logo {
+  font-family: "DM Serif Text", serif;
+  color: black;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+nav ul a.navItem {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 0;
+  margin: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-size: 0.8em;
+}
+nav ul a.navItem:hover, nav ul a.navItem:visited, nav ul a.navItem:active {
+  border-bottom: 3px solid #859e64;
+}
+
+.contentWrapper {
+  position: relative;
+  padding: 5% 2%;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto;
+}
+.contentWrapper.firstOne {
+  margin-top: 100px;
+}
+.contentWrapper h1 {
+  color: #a99478;
+  background-color: white;
+  font-size: 3.25em;
+  padding: 0.5em;
+  margin: 0 auto 0 -70px;
+  position: absolute;
+  top: 30%;
+  font-family: "DM Serif Text", serif;
+  letter-spacing: 2px;
+  text-align: left;
+  font-weight: 300;
+  width: 45%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.contentWrapper h1 span {
+  color: black;
+}
+.contentWrapper h2 {
+  font-size: 3em;
+  text-align: center;
+  font-family: "DM Serif Text", serif;
+  letter-spacing: 2px;
+}
+.contentWrapper .myPhoto {
+  width: 55%;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  border: 15px solid white;
+  box-sizing: border-box;
+  margin-bottom: 2em;
+}
+.contentWrapper .myPhoto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.contentWrapper p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.75em;
+  padding: 0;
+  margin: 1em auto;
+}
+.contentWrapper .iconWrapper {
+  width: 55%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 30px auto 0 auto;
+  justify-content: center;
+}
+.contentWrapper .iconWrapper .fab, .contentWrapper .iconWrapper .fas {
+  font-size: 2em;
+  color: black;
+  margin: 0 15px;
+}
+.contentWrapper .skillWrapper {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 30px 0;
+}
+.contentWrapper .skillWrapper .skillRow {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 20px 0;
+}
+.contentWrapper .skillWrapper .skillRow .title {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+  width: 15%;
+  text-align: right;
+  margin-right: 20px;
+}
+.contentWrapper .skillWrapper .skillRow .meter {
+  width: 85%;
+  background-color: white;
+  height: 20px;
+}
+.contentWrapper .skillWrapper .skillRow .meter span {
+  display: block;
+  height: 100%;
+}
+.contentWrapper .skillWrapper .skillRow .meter span.mocha {
+  background-color: #a99478;
+}
+.contentWrapper .skillWrapper .skillRow .meter span.tea {
+  background-color: #ccb89d70;
+}
+.contentWrapper .skillWrapper .skillRow .meter span.gray {
+  background-color: #808184;
+}
+.contentWrapper .skillWrapper .skillRow .meter span.teal {
+  background-color: #5f9ca2;
+}
+.contentWrapper .skillWrapper .skillRow .meter span.mauve {
+  background-color: #9a728a;
+}
+.contentWrapper .skillWrapper .skillRow .meter span.ruby {
+  background-color: #b57373;
+}
+.contentWrapper .skillWrapper .skillRow .meter span.green {
+  background-color: #859e64;
+}
+.contentWrapper .portfolioWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+.contentWrapper .portfolioWrapper .portfolioPiece {
+  width: calc(100% / 3 - 4%);
+  height: 250px;
+  margin: 2%;
+  background-color: #ccb89d70;
+  text-decoration: none;
+}
+.contentWrapper .portfolioWrapper .portfolioPiece:active, .contentWrapper .portfolioWrapper .portfolioPiece:hover {
+  background-color: #859e64;
+}
+.contentWrapper .portfolioWrapper .portfolioPiece .portText {
+  font-family: "DM Serif Text", serif;
+  color: white;
+  font-size: 1.25em;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contentWrapper form input, .contentWrapper form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin: 10px auto;
+  font-size: 1em;
+}
+.contentWrapper form input:focus, .contentWrapper form textarea:focus {
+  outline: none;
+  border: 2px solid #ccc;
+}
+.contentWrapper form .formLabels {
+  font-size: 1.25em;
+  margin: 1em auto 0 0;
+}
+.contentWrapper form button {
+  background-color: #859e64;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 50px auto;
+  position: relative;
+  font-size: 1em;
+  border: 2px solid #f6f6f3;
+}
+.contentWrapper form button:focus {
+  outline: none;
+}
+.contentWrapper form button:hover, .contentWrapper form button:visited, .contentWrapper form button:active {
+  border: 2px solid #ccc;
+  background-color: #a99478;
+  color: white;
+}
+
+footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+footer .copyright {
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 0.75em;
+  letter-spacing: 1px;
+  padding: 1em;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  nav .logo {
+    position: relative;
+    left: 10px;
+    top: 0;
+    transform: none;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
+  nav ul {
+    justify-content: center;
+  }
+  nav ul a.navItem {
+    margin: 0 5px;
+  }
+
+  .contentWrapper h1 {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: -90px auto 0 auto;
+    font-size: 2em;
+  }
+  .contentWrapper .myPhoto {
+    width: 100%;
+    display: block;
+  }
+  .contentWrapper .skillWrapper .skillRow {
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .contentWrapper .skillWrapper .skillRow .title {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0 5px 0;
+  }
+  .contentWrapper .skillWrapper .skillRow .meter {
+    width: 100%;
+  }
+  .contentWrapper .portfolioWrapper .portfolioPiece {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
