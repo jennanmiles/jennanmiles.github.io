@@ -196,6 +196,9 @@ nav ul a.navItem:hover, nav ul a.navItem:visited, nav ul a.navItem:active {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  word-break: break-word;
+  padding: 1em;
+  box-sizing: border-box;
 }
 .contentWrapper form input, .contentWrapper form textarea {
   display: block;

@@ -229,6 +229,9 @@ nav {
                 position: relative;
                 top: 50%;
                 transform: translateY(-50%);
+                word-break: break-word;
+                padding: 1em;
+                box-sizing: border-box;
             }
         }
     }
